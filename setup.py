@@ -11,7 +11,7 @@ setup(
     entry_points='''
         [airscooter.cli_plugins]
         init_catalog=airscooter_urban_physiology_plugin.cli:init_catalog
-        finalize_catalog=airscooter_urban_physiology_plugin.cli:finalize
+        finalize_catalog=airscooter_urban_physiology_plugin.cli:finalize_catalog
     ''',
     description='Plugin bringing the Urban Physiology workflow to airscooter.',
     author='Aleksey Bilogur',
