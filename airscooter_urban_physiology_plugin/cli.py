@@ -11,4 +11,5 @@ def init_catalog():
 
 @click.command()
 def finalize_catalog():
-    raise NotImplementedError("Catalog finalization has not been implemented yet.")
+    workflow_utils.finalize_catalog(".")
+    workflow_utils.update_dag(root=".")
