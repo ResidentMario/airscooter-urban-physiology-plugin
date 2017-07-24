@@ -10,5 +10,5 @@ def init_catalog():
 
 
 @click.command()
-def finalize():
+def finalize_catalog():
     raise NotImplementedError("Catalog finalization has not been implemented yet.")
