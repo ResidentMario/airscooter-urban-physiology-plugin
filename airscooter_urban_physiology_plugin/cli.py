@@ -1,6 +1,6 @@
 import click
 # noinspection PyUnresolvedReferences
-import urban_physiology_toolkit.workflow_utils as workflow_utils
+from urban_physiology_toolkit import workflow
 
 
 @click.command()
@@ -9,11 +9,11 @@ import urban_physiology_toolkit.workflow_utils as workflow_utils
 @click.option('--max-columns', help='The maximum size (in number of columns of data) of resources in the glossary that '
                                     'will be read into the catalog.')
 def init_catalog(max_filesize, max_columns):
-    workflow_utils.init_catalog("glossary.json", ".", max_filesize=max_filesize, max_columns=max_columns)
-    workflow_utils.update_dag(root=".")
+    workflow.init_catalog("glossary.json", ".", max_filesize=max_filesize, max_columns=max_columns)
+    workflow.update_dag(root=".")
 
 
 @click.command()
 def finalize_catalog():
-    workflow_utils.finalize_catalog(".")
-    workflow_utils.update_dag(root=".")
+    workflow.finalize_catalog(".")
+    workflow.update_dag(root=".")
